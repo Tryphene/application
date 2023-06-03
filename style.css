@@ -1,0 +1,149 @@
+.sidebar {
+    position: fixed;
+    /*box-shadow: 2px 2px 10px 0 rgba(255, 0, 0, 0.5);*/
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(65, 66, 64);
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 999;
+    transition: all 0.3s;
+    padding-top: 60px;
+  }
+
+  .navbars{
+    width: 0;
+  }
+  
+  .sidebar a {
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+  
+  .sidebar a:hover {
+    color: ffffff;
+    background-color: rgba(250, 219, 238, 0.379);
+    color: rgb(199, 210, 210);
+    font-size: 20px;
+    
+  }
+  
+  .ac {
+    color: black;
+    background-color: rgba(250, 219, 238, 0.379);
+    color: rgb(199, 210, 210);
+    font-size: 20px;
+  }
+
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #0b0b0b;
+      color: white;
+    }
+
+    .content {
+        margin-left: 300px;
+        margin-top: 20px;
+        justify-content: center;
+      }
+
+      .con{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      form {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .esp {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 80px;
+    
+    }
+    
+      label, input {
+        /* display: block;
+        margin-bottom: 10px; */
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+  
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #f2f2f2;
+        border: none;
+        cursor: pointer;
+      }
+
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 0;
+    }
+
+    .navbars {
+        background-color: rgb(68, 69, 67);
+        overflow: hidden;
+        height: auto;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+      justify-content: center;
+      }
+
+      .navbars a {
+        color: #ffffff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .navbars a:hover {
+        background-color: #ddd;
+        color: black;
+        font-size: 20px;
+      }
+  
+    .logo{
+      margin-top: 2px;
+      margin-bottom: 0;
+      width: 40px;
+      margin-right: 40px;
+    }
+
+    .content {
+        margin-left: 50px;
+        margin-top: 100px;
+        justify-content: center;
+      }
+  }
