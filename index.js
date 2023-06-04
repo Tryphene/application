@@ -10,7 +10,6 @@ var menus = [
 ];
 
 var select = 0;
-// console.log(select);
 
 var ul = document.getElementById("ul");
 var sidebar = document.getElementById("sidebar");
@@ -22,11 +21,14 @@ var telephone = document.getElementById("telephone");
 var span = document.getElementById("span");
 
 function maFonction(index) {
+  var select = 0;
   select = index;
+  localStorage.setItem("select", select);
   console.log(select);
 }
 
 function maFonction2(k) {
+  var select = localStorage.getItem("select");
   menus.map((menu, index) => {
     k.innerHTML += `<a class="${
       select == index ? "nav-link ac" : "nav-link"
@@ -36,21 +38,6 @@ function maFonction2(k) {
 
 maFonction2(sidebar);
 maFonction2(nav);
-
-// var datas = {
-//   nom: nom.value,
-//   prenom: prenom.value,
-//   telephone: telephone.value,
-//   mail: mail.value,
-// };
-
-var datas = new FormData();
-datas.append("nom", nom.value);
-datas.append("prenom", prenom.value);
-datas.append("telephone", telephone.value);
-datas.append("mail", mail.value);
-
-var t;
 
 function enregistrement() {
   var datas = new FormData();
@@ -67,7 +54,6 @@ function enregistrement() {
       console.log(telephone.value);
       console.log(mail.value);
 
-      t = response.data.message;
       nom.value = null;
       prenom.value = null;
       mail.value = null;
